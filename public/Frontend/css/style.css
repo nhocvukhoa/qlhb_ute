@@ -1,0 +1,1224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none !important;
+}
+
+/*TODO: Nút quay về đầu*/
+.topbtn{
+  position: fixed;
+  bottom:18px;
+  right: 20px;
+  font-size:22px;
+  width: 48px;
+  height:48px;
+  background: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color:white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+  border-radius: 100%;
+}
+.topbtn:focus{
+  outline: none;
+}
+.topbtn:hover{
+  opacity: 0.8;
+}
+
+/*TODO: Nút mess*/
+/* .icon_mess {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 100000;
+} */
+
+
+body {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 18px;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+/*TODO: I. Trang chủ*/
+/*TODO: 1. Header*/
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+  padding: 6px 0px;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999999;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+}
+
+.header-left .logo img {
+  max-width: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-item {
+  list-style: none;
+  position: relative;
+  padding: 0 1rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav-item a {
+  color: #000;
+  font-size: 18px;
+}
+
+.nav-item::after {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.4rem;
+  background-color: #dc3545;
+  transition: width 200ms ease-in;
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+  width: 80%;
+}
+
+
+.nav-item a {
+  line-height: 53px;
+  display: block;
+}
+
+.nav-item:hover ul,
+.nav-item:focus .ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-item.active a{
+ color: #000;
+}
+
+.nav-list-drop {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  box-shadow: 0 0 10px #e1e5ee;
+  background: white;
+  border-radius: 0.2rem;
+  min-width: 16rem;
+  max-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s easy-in-out;
+  margin: 5px 0;
+}
+
+.nav-list-drop li {
+  list-style: none;
+  border-radius: 0.2rem;
+  padding: 0 1rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.nav-list-drop li:hover,
+.nav-list-drop li:focus {
+  background-color: #fce4ec;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.user-action {
+  display: flex;
+}
+
+.user-action a {
+  text-decoration: none;
+  color: #000 !important;
+}
+
+.user-action a:first-child {
+  margin-left: 10px;
+}
+
+/*TODO: 2. Phần slider*/
+.slider {
+  max-width: 100%;
+  position: relative;
+  /* margin-top: 65px; */
+}
+
+/* .slider-fixed {
+  margin-top: 10px;
+} */
+
+.owl-carousel {
+  width: 100%;
+  height: 100vh;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.owl-dots {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 1.5%;
+}
+
+.owl-dots span {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.owl-dots button {
+  border: none !important;
+  outline: none !important;
+}
+
+.owl-nav button {
+  border: none !important;
+  outline: none !important;
+}
+
+.owl-prev, .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff !important;
+  font-size: 60px !important;
+  font-weight: bolder !important;
+  background: none !important;
+}
+
+.owl-prev {
+  left: 1%;
+}
+
+.owl-next {
+  right: 1%;
+} */
+
+
+/*TODO: 3. Phần counter*/
+.counter {
+  width: 100%;
+  /* background: url(../images/counter.jpg) no-repeat center; */
+  /* background-size: cover; */
+  padding: 40px 0;
+}
+
+.counter_img{
+  position: relative;
+}
+
+.counter_content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 99999999999;
+}
+
+.counter-content {
+  text-align: center;
+  padding: 20px 0;
+  background: none;
+}
+
+.counter-number {
+  font-family: "Dosis";
+  font-size: 48px;
+  font-weight: 200px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.counter-desc {
+  color: #fff;
+}
+
+/*TODO: 4. Phần học bổng*/
+.filter-category, .filter-semester {
+  display: flex;
+  flex-direction: column;
+}
+
+.scholarship {
+  background: #f8f8f8;
+  padding: 30px 0px;
+}
+
+.scholarship-left,
+.scholarship-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.scholarship-left .header-title {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  padding: 0 15px 0 20px;
+  margin: 15px 0 4px 0;
+  position: relative;
+  border-bottom: 1px solid #aaaaaa;
+  margin-bottom:  20px; 
+}
+
+.scholarship-left .header-title h1 {
+  margin-top: 3px;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.scholarship-left .header-title:before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  left: 2px;
+  top: -5px;
+  bottom: 10px;
+  -webkit-transform: skew(-20deg);
+  -khtml-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+  transform: skew(-20deg);
+  background-color: #dd3333;
+}
+
+.category-scholarship {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(228, 92, 92);
+}
+
+.category-scholarship h1 {
+  font-size: 20px;
+  padding: 15px 0px;
+  text-align: center;
+  background: rgb(228, 92, 92);
+  color: #fff;
+}
+
+.category-name {
+  list-style: none;
+  position: relative;
+}
+
+.category-name .category-name-item {
+  padding: 15px 10px;
+  border-bottom: 1px solid rgb(228, 92, 92);
+  cursor: pointer;
+}
+
+.category-name .category-name-item:last-child {
+  border-bottom: none;
+}
+
+.category-name .category-name-item a {
+  color: #333;
+  font-size: 18px;
+  display: block;
+}
+
+.category-name .category-name-item:hover {
+  background: rgb(226, 162, 162);
+  color: white;
+}
+
+.label-scholarship {
+  background: rgb(228, 92, 92);
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: rgb(228, 92, 92);
+  margin-bottom: 20px;
+}
+
+.scholarship-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-wrapper {
+  position: relative;
+}
+.card-img-top {
+  height: 140px;
+}
+
+.status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: #dc3545;
+  font-size: 16px;
+  color: #fff;
+  padding: 5px 15px;
+  font-weight: 500;
+  border-bottom-right-radius: 5px;
+}
+
+.status2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: #0069D9;
+  font-size: 16px;
+  color: #fff;
+  padding: 5px 15px;
+  font-weight: 500;
+  border-bottom-right-radius: 5px;
+}
+.card-content {
+  background: #fff;
+  padding: 0 8px;
+  border-radius: 50px;
+}
+.scholarship-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px 5px 10px 5px;
+  line-height: 21px;
+  color: #000;
+}
+
+.total-register,
+.registered-quantity {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.fa-user-graduate {
+  margin-right: 10px;
+}
+
+.bi-clipboard-minus {
+  margin-right: 10px;
+}
+
+.category-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bbbbbb;
+}
+
+.category-content h1 {
+  font-size: 20px;
+  padding: 15px 0px;
+  text-align: center;
+  background: #dc3545;
+  color: #fff;
+}
+
+.category-list {
+  list-style: none;
+}
+
+.category-list li {
+  padding: 10px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.category-list li:last-child {
+  border-bottom: none;
+}
+
+.category-list li a h2:hover {
+  color:red;
+}
+
+.category-list li .category-title {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.5 px;
+  color: #000;
+}
+
+
+.pagination-list {
+  display: flex;
+  justify-content: center;
+}
+
+.read-more {
+  color: red;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  border: 1px solid  rgb(228, 92, 92);
+  border-top: none;
+}
+
+.read-more:hover {
+  color: red;
+}
+
+
+/*TODO: Phần footer*/
+.footer {
+  width: 100%;
+  background: #fff;
+}
+
+.footer-top {
+  padding: 40px 0;
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.footer-top .about-title {
+  padding-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 22px;
+  font-weight: 500;
+  color: #265bc5;
+}
+
+.footer-top .about-content {
+  line-height: 21px;
+  font-size: 17px;
+}
+
+.footer-top .about-contact {
+  padding-left: 50px;
+}
+
+.footer-top .list-contact {
+  list-style: none;
+}
+
+.footer-top .list-contact li {
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.footer-top .list-contact li .bi-envelope,
+.footer-top .list-contact li .bi-telephone,
+.footer-top .list-contact li .bi-geo-alt {
+  margin-right: 8px;
+}
+
+.footer-top .get-notifications p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-top .get-notifications .email-txt {
+  width: 100%;
+  position: relative;
+  margin: 8px 0 20px 0;
+}
+.footer-top .get-notifications .email-txt input {
+  width: 100%;
+  padding: 13px 20px 12px 12px;
+  border: 1px solid #cad3df;
+  background: #eceff4;
+  color: #8493a8;
+}
+
+.footer-top .get-notifications .email-txt .send-email {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 13px 20px 12px 20px;
+  background: #ee1f23;
+  border: none;
+  outline: none;
+}
+
+.footer-top .get-notifications .map a img {
+  width: 100%;
+}
+
+.footer-bottom {
+  padding: 15px 0;
+}
+
+.footer-bottom p {
+  font-size: 17px;
+  color: #333;
+}
+
+/*TODO: II. Trang login, register*/
+
+.login,
+.register {
+  width: 100%;
+  padding: 100px 0 85px 0;
+  background-color: #fff;
+}
+
+.login-content,
+.register-content {
+  padding: 1.5rem 2rem;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.login-title,
+.register-title {
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 0.8rem !important;
+}
+
+.btn-login-user,
+.btn-register-user {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px 3rem;
+  margin-top: 5px;
+}
+
+.not-member {
+  margin-top: 13px;
+}
+
+/*TODO: III. Trang Danh sách học bổng đã đăng kí*/
+.registed-list {
+  width: 100%;
+  padding: 100px 0 30px 0;
+  background-color: #fff;
+}
+
+.registed-list h1 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.registed-list table tr th{
+    background-color: rgb(108, 168, 236);
+    color: #fff;
+    font-size: 20px;
+}
+
+/*TODO: IV. Trang Chi tiết học bổng*/
+.scholarship-detail {
+  width: 100%;
+  padding: 100px 0 30px 0;
+  background-color: #fff;
+}
+
+.scholarship-detail-content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaaaaa;
+}
+
+.scholarship-detail-wrapper {
+  padding: 20px 20px;
+}
+
+.scholarship-detail-content .scholarship-title {
+  color: #000;
+  font-size: 18px;
+  font-weight: 550;
+  margin: 10px 0px 15px 0px;
+}
+
+.scholarship-detail-content .scholarship_file {
+  font-size: 18px;
+}
+
+.fa-graduation-cap, .fa-calendar-alt {
+  margin-right: 7px;
+}
+
+.scholarship-detail-content .scholarship-content {
+  margin-bottom: 20px; 
+} 
+
+.scholarship-detail-content .scholarship-content p {
+  font-size: 18px;
+  line-height: 22px;
+}
+.scholarship-detail-content .scholarship-content ol {
+  list-style: block;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.scholarship-detail-content .scholarship-content ol li {
+  margin-top: 5px;
+  line-height: 22px;
+}
+
+.scholarship-detail-content .footer-detail{
+  width: 100%;
+  font-size: 16px;
+  color: #000;
+}
+
+.footer-detail .footer-detail-item {
+  width: 100%;
+}
+
+.footer-detail .footer-detail-item .bi-clock {
+  margin-right: 5px;
+}
+
+.footer-detail .footer-detail-item:first-child {
+  margin-bottom: 10px;
+}
+
+.footer-detail .footer-detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-detail .footer-detail-item p {
+  width: 33.33%;
+  color: #000;
+}
+
+.footer-detail .footer-detail-item:last-child p:last-child {
+  width: 50%;
+}
+
+
+
+
+
+
+.registration-form {
+  margin-top: 20px;
+  padding: 20px 20px;
+  border: 1px solid #aaaaaa;
+}
+
+.form-title {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.relate-scholarship {
+  border: 1px solid #aaaaaa;
+  border-bottom: none;
+}
+
+.relate-title {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 15px 0px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #dc3545;
+}
+
+.relate-scholarship-list {
+  background-color: #fff;
+}
+
+.relate-scholarship .relate-scholarship-item {
+  padding: 10px 10px;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.relate-scholarship-item:last-child {
+  border-bottom: none;
+}
+
+.relate-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.relate-name {
+  margin-top: 7px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/*TODO: V. Trang thông báo*/
+.notice-page {
+  width: 100%;
+  padding: 100px 0 60px 0;
+  background-color: #fff;
+}
+
+.content-notice {
+  background: #fff;
+  border: 1px solid #bbbbbb;
+}
+
+.content-notice .notice-item {
+  padding: 15px 30px;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.content-notice .notice-item:last-child {
+  border-bottom: none;
+}
+
+.content-notice .notice-item .img-notice {
+  width: 200px;
+  height: 95px;
+  object-fit: cover;
+  margin-right: 30px;
+}
+.notice-body {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+}
+
+.content-notice .notice-item .notice-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #337ab7;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.content-notice .notice-item .notice-desc {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.notice-author .bi-person-circle,
+.notice-time .bi-clock {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.notice-author, .notice-time {
+  color: #5e5e5e;
+  font-size: 16px;
+}
+
+/*TODO: VI. Trang chi tiết thông báo*/
+.notice-detail-page {
+  width: 100%;
+  padding: 100px 0 30px 0;
+  background-color: #fff;
+}
+
+.content-notice-detail {
+  background: #fff;
+  border: 1px solid #aaaaaa;
+}
+
+.content-notice-detail .notice-item-detail {
+  padding: 15px 30px;
+}
+
+.content-notice-detail .notice-item-detail .notice-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #337ab7;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.content-notice-detail .notice-item-detail .notice-content {
+  margin: 10px 0 15px 0;
+}
+
+.content-notice-detail .notice-item-detail .notice-content p{
+  font-size: 18px;
+  margin: 5px 0 5px 0;
+  line-height: 23px;
+}
+
+.content-notice-detail .notice-item-detail .notice-file {
+  font-size: 16px;
+}
+
+.content-notice-detail .notice-item-detail .notice-author-time {
+  margin-top: 15px;
+}
+
+.notice-detail-page .notice-related {
+  width: 100%;
+  background: #fff;
+  border: 1px solid red;
+}
+
+.notice-related .notice-related-title {
+  background: red;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.notice-related .notice-related-body {
+  background: #fff;
+  list-style: none;
+}
+
+.notice-related .notice-related-body .notice-related-item {
+  padding: 10px 7px;
+  border-bottom: 1px solid red;
+}
+
+.notice-related .notice-related-body .notice-related-item:last-child {
+  border-bottom: none;
+}
+
+.notice-related .notice-related-body .notice-related-item img {
+  width: 60px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.notice-related .notice-related-body .notice-related-item .notice-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #337ab7;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  width: 220px !important;
+  padding: 10px 0;
+  top: 8px !important;
+}
+
+.dropdown-menu li {
+  margin: 4px 0;
+  padding: 8px 4px;
+}
+
+.dropdown-menu li:hover {
+  color: #2e2f37;
+    text-decoration: none;
+    background-color: #eaecf4;
+}
+
+/*TODO: VII. Trang lịch sử đăng tin của nhà tài trợ*/
+.post-history {
+  width: 100%;
+  padding: 90px 0 30px 0;
+  background-color: #f8f9fc;
+  overflow: hidden;
+}
+
+.post-history ol {
+  list-style: block !important;
+  margin: 6px 0px 5px 25px;
+}
+
+.post-history ol li {
+  margin-top: 5px;
+}
+
+
+/*TODO: VIII. Trang liên hệ*/
+.contact {
+  width: 100%;
+  padding: 100px 0 30px 0;
+  background-color: #fff;
+}
+
+.contact-info h2.title,
+.contact-form h2.title
+{
+  color: #FE980F;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #FE980F;
+  position: relative;
+}
+
+
+.contact-info-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.contact-info-content .contact-name,
+.contact-info-content .contact-address,
+.contact-info-content .contact-phone,
+.contact-info-content .contact-email
+{
+  margin: 5px 0;
+}
+
+#breadcrumb {
+  list-style: none;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+#breadcrumb .icon {
+  font-size: 14px;
+}
+#breadcrumb li {
+  float: left;
+}
+#breadcrumb li a {
+  color: #FFF;
+  display: block;
+  background: #3498db;
+  text-decoration: none;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px 0 5px;
+  text-align: center;
+  margin-right: 23px;
+}
+#breadcrumb li:nth-child(even) a {
+  background-color: #2980b9;
+}
+#breadcrumb li:nth-child(even) a:before {
+  border-color: #2980b9;
+  border-left-color: transparent;
+}
+#breadcrumb li:nth-child(even) a:after {
+  border-left-color: #2980b9;
+}
+#breadcrumb li:first-child a {
+  padding-left: 15px;
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 0 0 4px;
+}
+#breadcrumb li:first-child a:before {
+  border: none;
+}
+#breadcrumb li:last-child a {
+  padding-right: 15px;
+  -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 4px 4px 0;
+}
+#breadcrumb li:last-child a:after {
+  border: none;
+}
+#breadcrumb li a:before, #breadcrumb li a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #3498db;
+  border-width: 20px 10px;
+  width: 0;
+  height: 0;
+}
+#breadcrumb li a:before {
+  left: -20px;
+  border-left-color: transparent;
+}
+#breadcrumb li a:after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #3498db;
+}
+#breadcrumb li a:hover {
+  background-color: #1abc9c;
+}
+#breadcrumb li a:hover:before {
+  border-color: #1abc9c;
+  border-left-color: transparent;
+}
+#breadcrumb li a:hover:after {
+  border-left-color: #1abc9c;
+}
+#breadcrumb li a:active {
+  background-color: #16a085;
+}
+#breadcrumb li a:active:before {
+  border-color: #16a085;
+  border-left-color: transparent;
+}
+#breadcrumb li a:active:after {
+  border-left-color: #16a085;
+}
+
+.line2 {
+  width: 100%;
+  height: 1px;
+  background: rgb(228, 92, 92);
+  margin-bottom: 20px;
+}
+
+.line3 {
+  width: 100%;
+  height: 1px;
+  background: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+/*TODO: Top xem nhiều*/
+.top-register {
+  padding: 0px 0px 30px 0;
+  background-color: #f8f8f8;
+}
+
+.top-register .row {
+  border-radius: 5px;
+}
+
+.top-register .header-title {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  padding: 0 15px 0 20px;
+  margin: 6px 0 4px 0;
+  position: relative;
+  border-bottom: 1px solid #aaaaaa;
+  margin-bottom:  20px; 
+}
+
+.top-register .header-title h1 {
+  margin-bottom: 8px;
+}
+
+.top-register .header-title:before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  left: 5px;
+  top: -3px;
+  bottom: 9px;
+  -webkit-transform: skew(-20deg);
+  -khtml-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+  transform: skew(-20deg);
+  background-color: #dd3333;
+}
+
+/*TODO: Slide nhà tài trợ */
+.relationship {
+  width: 100%;
+  position: relative;
+  box-shadow: 8px 0 0 0 #fff;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.relationship-content {
+  position: relative;
+  overflow:hidden;
+}
+
+.relationship-content .container{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+
+
+.slick-dots li {
+  display: none;
+}
